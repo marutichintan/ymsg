@@ -35,8 +35,10 @@ class YmsgClient(Session):
         
 y = YmsgClient("username", "password")
 y.connect()
+
 while y.isConnected():
         who = raw_input("who: ")
         msg = raw_input("msg: ")
         y.sendIm(who, msg)
+        
 y.disconnect()
